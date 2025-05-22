@@ -9,7 +9,7 @@
   <title>TabSTAR: A Foundation Tabular Model With Semantically Target-Aware Representations</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MPP51MKEMG"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
 
@@ -19,7 +19,7 @@
 
     gtag('js', new Date());
 
-    gtag('config', 'G-PYVRSFMDRL');
+    gtag('config', 'G-MPP51MKEMG');
   </script>
 
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
@@ -145,6 +145,17 @@
                   </span>
                   <span>Code</span>
                   </a>
+              </span>
+
+              <!-- HuggingFace Model Link. -->
+              <span class="link-block">
+                <a href="https://huggingface.co/alana89/TabSTAR"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg" alt="HuggingFace" style="height: 1em; width: 1em;">
+                  </span>
+                  <span>Model</span>
+                </a>
               </span>
               <!-- Dataset Link. -->
               <!-- <span class="link-block">
@@ -279,11 +290,11 @@
     <div class="columns is-centered">
 
       <!-- Top Left Section -->
-      <div class="column">
+      <div class="column is-centered has-text-centered">
         <div class="content">
-          <h2 class="title is-4">Classification - Up to 10K examples</h2>
+          <h2 class="title is-4">Up to 10K examples</h2>
           <p>
-            <img src="./static/images/cls-under10k.png" alt="Classification performance on small datasets" width="100%">
+            <img src="./static/images/cls_under10k.png" alt="Classification performance on small datasets" width="100%">
             <p class="has-text-centered">
               <!-- TabSTAR outperforms existing methods on classification tasks with smaller datasets (up to 10K examples). -->
             </p>
@@ -292,12 +303,12 @@
       </div>
 
       <!-- Top Right Section -->
-      <div class="column">
+      <div class="column is-centered has-text-centered">
         <div class="content">
-          <h2 class="title is-4">Classification - Above 10K examples
+          <h2 class="title is-4">Above 10K examples
           </h2>
           <p>
-            <img src="./static/images/cls-under10k.png" alt="Classification performance on small datasets" width="100%">
+            <img src="./static/images/cls_above10k.png" alt="Classification performance on small datasets" width="100%">
 
             <!-- Description for section 2 goes here. This section can contain text, images, or other content. -->
           </p>
@@ -305,29 +316,7 @@
       </div>
     </div>
 
-    <div class="columns">
-      <!-- Bottom Left Section -->
-      <div class="column">
-        <div class="content">
-          <h2 class="title is-4">Regression - Up to 10K examples</h2>
-          <p>
-            <img src="./static/images/cls-under10k.png" alt="Classification performance on small datasets" width="100%">
-          </p>
-        </div>
-      </div>
-
-      <!-- Bottom Right Section -->
-      <div class="column">
-        <div class="content">
-          <h2 class="title is-4">Regression - Above 10K examples</h2>
-          <p>
-            <img src="./static/images/cls-under10k.png" alt="Classification performance on small datasets" width="100%">
-
-            <!-- Description for section 4 goes here. This section can contain text, images, or other content. -->
-          </p>
-        </div>
-      </div>
-    </div>
+  
   </div>
 </section>
 
@@ -380,12 +369,12 @@ predictions = model.predict(X)</code></pre>
 <section class="section" id="BibTeX" style="padding-top: 1rem;">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre><code>@article{park2021nerfies,
-  author    = {Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},
-  title     = {Nerfies: Deformable Neural Radiance Fields},
-  journal   = {ICCV},
-  year      = {2021},
-}</code></pre>
+    <pre><code>@article{shapira2024can,
+      title = {Can Large Language Models Replace Economic Choice Prediction Labs? The Case of Language-based Persuasion Games},
+      author = {Shapira, Eilam and Madmon, Omer and Reichart, Roi and Tennenholtz, Moshe},
+      journal = {arXiv preprint arXiv:2401.17435},
+      year = {2024},
+    }</code></pre>
   </div>
 </section>
 
@@ -405,16 +394,8 @@ predictions = model.predict(X)</code></pre>
       <div class="column is-8">
         <div class="content">
           <p>
-            This website is licensed under a <a rel="license"
-                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
-          <p>
-            This means you are free to borrow the <a
-              href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website,
-            we just ask that you link back to this page in the footer.
-            Please remember to remove the analytics code included in the header of the website which
-            you do not want on your website.
+            This page was based on the <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a> project page, and licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">CC-AS 4.0 License</a>.
           </p>
         </div>
       </div>
