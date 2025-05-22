@@ -153,3 +153,22 @@ body {
 #interpolation-image-wrapper img {
   border-radius: 5px;
 }
+
+/* Responsive title styles */
+@media screen and (max-width: 768px) {
+  .title.is-1 {
+    font-size: 2rem !important;
+  }
+  
+  .title.is-3 {
+    font-size: 1.5rem !important;
+  }
+  
+  .title.is-4 {
+    font-size: 1.25rem !important;
+  }
+  
+  .subtitle {
+    font-size: 1rem !important;
+  }
+}
