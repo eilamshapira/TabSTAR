@@ -32,11 +32,6 @@ body {
     font-family: 'Google Sans', sans-serif;
 }
 
-@media screen and (max-width: 768px) {
-    .publication-title {
-        font-size: 1.5rem !important;
-    }
-}
 
 .publication-banner {
   max-height: parent;
