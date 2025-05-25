@@ -108,7 +108,7 @@
             <div class="publication-links">
               <!-- PDF Link. -->
               <span class="link-block">
-                <a href="https://arxiv.org/pdf/2011.12948"
+                <a href="https://arxiv.org/pdf/2401.17435"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
@@ -116,7 +116,7 @@
                   <span>Paper</span>
                 </a>
               </span>
-              <span class="link-block">
+              <!-- <span class="link-block">
                 <a href="https://arxiv.org/abs/2011.12948"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
@@ -124,7 +124,7 @@
                   </span>
                   <span>arXiv</span>
                 </a>
-              </span>
+              </span> -->
 
               <!-- Video Link. -->
               <!-- <span class="link-block">
@@ -331,10 +331,11 @@ import pandas as pd
 
 # Load your data
 df = pd.read_csv('your_data.csv')
+target_column = 'YOUR_TARGET_COLUMN'
 
 # Split features and target
-X = df.drop('target_column', axis=1)
-y = df['target_column']
+X = df.drop(target_column, axis=1)
+y = df[target_column]
 
 # Initialize and fit TabSTAR
 model = tabstar()
