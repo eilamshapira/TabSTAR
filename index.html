@@ -331,16 +331,47 @@
     <!-- Concurrent Work. -->
     <div class="columns is-centered">
       <div class="column is-full-width">
-        <h2 class="title is-3">Using TabSTAR</h2>
+        <h2 class="title is-3">Get Started with TabSTAR</h2>
 
         <div class="content has-text-justified">
           <p>
-            Using TabSTAR is simple. First, install it via pip:
+            TabSTAR makes training tabular models effortless. Just install the package, load your data, and let TabSTAR do the work — from preprocessing to prediction.
+          </p><p>
+            TabSTAR will be available as a pip package in the next few days. Join our waiting list to be notified when it's ready!
+          </p>
+        </div>
+
+        <div class="box">
+          <form action="https://formspree.io/f/manogolv" method="POST">
+            <div class="field">
+              <label class="label">Your email</label>
+              <div class="control">
+                <input class="input" type="email" name="email" placeholder="Enter your email" required>
+              </div>
+              <p class="help">We'll notify you when TabSTAR is available for installation via pip.</p>
+            </div>
+
+            <div class="field">
+              <div class="control">
+                <button class="button is-dark is-rounded" type="submit">
+                  <span class="icon">
+                    <i class="fas fa-bell"></i>
+                  </span>
+                  <span>Join Waiting List</span>
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <div class="content has-text-justified">
+          <p>
+            Once TabSTAR is available, you'll be able to install it via pip:
           </p>
           <pre><code>pip install tabstar</code></pre>
 
           <p>
-            Then you can use it to fit and predict with your CSV data:
+            And use it to fit and predict with your CSV data:
           </p>
           <pre><code>from tabstar import tabstar
 import pandas as pd
