@@ -279,75 +279,76 @@
 </section>
 
 
-<section class="section", style="padding-top: 0rem;">
+<section class="section" style="padding-top: 0rem;">
   <div class="container is-max-desktop">
-    <!-- Concurrent Work. -->
     <div class="columns is-centered has-text-centered">
-      <div class="column is-full-width">
+      <div class="column is-four-fifths">
         <h2 class="title is-3">Get Started with TabSTAR</h2>
 
         <div class="content has-text-justified">
           <p>
-            TabSTAR makes training tabular models effortless. Just install the package, load your data, and let TabSTAR do the work — from preprocessing to prediction.
-          </p><p>
-            TabSTAR will be available as a pip package in the next few days. Join our waiting list to be notified when it's ready!
+            TabSTAR is now available as a Python package!
           </p>
+          <p>
+            Install with pip:
+          </p>
+          <pre><code>pip install tabstar</code></pre>
+
+          <p>
+            Quickly get started with a few lines of code:
+          </p>
+          <pre><code>from importlib.resources import files
+import pandas as pd
+from sklearn.metrics import classification_report
+from sklearn.model_selection import train_test_split
+
+from tabstar.tabstar_model import TabSTARClassifier
+
+csv_path = files("tabstar").joinpath("resources", "imdb.csv")
+x = pd.read_csv(csv_path)
+y = x.pop('Genre_is_Drama')
+x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.1)
+tabstar = TabSTARClassifier()
+tabstar.fit(x_train, y_train)
+# tabstar.save("my_model_path.pkl")
+# tabstar = TabSTARClassifier.load("my_model_path.pkl")
+y_pred = tabstar.predict(x_test)
+print(classification_report(y_test, y_pred))</code></pre>
+          <p>
+            For more details, check out documentation on <a href="https://github.com/alanarazi7/TabSTAR" target="_blank">TabSTAR's GitHub repository</a>.
         </div>
 
-        <div class="box">
+        <!-- <div class="content has-text-justified">
+          <p>
+            Interested in pretraining TabSTAR for your own tasks or research? Leave your email and we’ll contact you!
+          </p>
+        </div> -->
+
+        <!-- <div class="box">
           <form action="https://formspree.io/f/manogolv" method="POST">
             <div class="field">
               <label class="label">Your email</label>
               <div class="control">
                 <input class="input" type="email" name="email" placeholder="Enter your email" required>
               </div>
-              <p class="help">We'll notify you when TabSTAR is available for installation via pip.</p>
+              <p class="help">We'll contact you about how to pretrain TabSTAR.</p>
             </div>
 
             <div class="field">
               <div class="control">
                 <button class="button is-dark is-rounded" type="submit">
                   <span class="icon">
-                    <i class="fas fa-bell"></i>
+                    <i class="fas fa-envelope"></i>
                   </span>
-                  <span>Join Waiting List</span>
+                  <span>Connect with Us</span>
                 </button>
               </div>
             </div>
           </form>
-        </div>
-
-        <!-- <div class="content has-text-justified">
-          <p>
-            Once TabSTAR is available, you'll be able to install it via pip:
-          </p>
-          <pre><code>pip install tabstar</code></pre>
-
-          <p>
-            And use it to fit and predict with your CSV data:
-          </p>
-          <pre><code>from tabstar import tabstar
-import pandas as pd
-
-# Load your data
-df = pd.read_csv('your_data.csv')
-target_column = 'YOUR_TARGET_COLUMN'
-
-# Split features and target
-X = df.drop(target_column, axis=1)
-y = df[target_column]
-
-# Initialize and fit TabSTAR
-model = tabstar()
-model.fit(X, y)
-
-# Make predictions
-predictions = model.predict(X)</code></pre>
-
         </div> -->
+
       </div>
     </div>
-    <!--/ Concurrent Work. -->
   </div>
 </section>
 
